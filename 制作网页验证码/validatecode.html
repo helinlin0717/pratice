@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="gb2312">
+    <title>网页随机验证码</title>
+    <link rel="stylesheet" type="text/html" href="css/validatecode.css">
+    <script type="text/javascript">
+        function validateCode(n){
+            var s="abcdeghijklmnopqrstuvwsyzABCDEFGHIJKLMNOPQRSTUVWSYZ1234567890";
+            var ret="";
+            for (var i=0;i<n;i++)
+            {
+                var index=Math.floor(Math.random()*62);
+                ret+=s.charAt(index);
+            }
+            return ret;
+        }
+        function Show(){
+            document.getElementById("msg").innerHTML=validateCode(4);
+        }
+        window.onload=Show;
+    </script>
+</head>
+<body>
+   <span id="msg"></span>
+   <input type="button" name="btn1" value="刷新" onclick="Show()">
+</body>
+</html>

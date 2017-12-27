@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta  http-equiv="content-type"  content="text/html"   charset="UTF-8">
+    <title>改变文本框背景色</title>
+    <link rel="stylesheet" type="text/css" href="css/changeText.css">
+</head>
+<script type="text/javascript">
+    function txtfocus(event) {
+        var e=window.event;
+        var obj=e.srcElement;
+        obj.style.background="red";
+    }
+    function txtblur(event) {
+        var e=window.event;
+        var obj=e.srcElement;
+        obj.style.background="yellow";
+    }
+</script>
+<body>
+     <table class="table1">
+         <tr>
+             <td width="188px">登录名称：</td>
+             <td width="226">
+                 <form name="form" method="post" action="#">
+                     <input type="text" name="username" onfocus="txtfocus()" onblur="txtblur()">
+                 </form>
+             </td>
+         </tr>
+         <tr>
+             <td width="188px">密码:</td>
+             <td>
+                 <form name="form1" method="post" action="#">
+                     <input type="text" name="password" onfocus="txtfocus()" onblur="txtblur()">
+                 </form>
+             </td>
+         </tr>
+     </table>
+</body>
+</html>

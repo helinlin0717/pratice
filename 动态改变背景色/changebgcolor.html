@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta  http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>动态改变背景色</title>
+    <link rel="stylesheet" type="text/css" href="css/changebgcolor.css">
+</head>
+<script type="text/javascript">
+    function ChangeColorOver() {
+        document.bgColor="yellow";
+        return;
+    }
+    function  ChangeColorOut() {
+        document.bgColor="white";
+        return;
+    }
+</script>
+<body>
+    <form name="frm">
+        <input type="button" name="MySure"  class="btn" value="动态背景色"
+               onmouseover="ChangeColorOver()" onmouseout="ChangeColorOut()">
+    </form>
+</body>
+</html>
